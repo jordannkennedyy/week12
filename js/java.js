@@ -7,13 +7,13 @@ function alertuser(){
 }
 
 
-button.addEventListener('click', alertuser, {once:true})
+// button.addEventListener('click', alertuser, {once:true})
 
 
 function changeBGPink(){
     document.body.style.backgroundColor = 'pink'
 }
-button.addEventListener('click', changeBGPink);
+// button.addEventListener('click', changeBGPink);
 
 
 
@@ -27,14 +27,28 @@ function changetext(){
     // else if it says Clicked update it to click me
     button.textContent = "Clicked";
 }
-button.addEventListener('click', changetext);
+// button.addEventListener('click', changetext);
 
 
-function updateImage(){
-    const image = document.querySelector("#shoppingCart");
-    image.setAttribute("src", "../images/263142.png")
-    image.setAttribute("width", 100)
-    image.setAttribute("height", 100)
-    image.setAttribute("alt", "new")
+// function updateImage(e){
+//     console.log(e)
+//     const image = document.querySelector("#shoppingCart");
+//     image.setAttribute("src", "../images/263142.png")
+//     image.setAttribute("width", 100)
+//     image.setAttribute("height", 100)
+//     image.setAttribute("alt", "new")
+// }
+// button.addEventListener('click', updateImage);
+
+
+const buttonContainer = document.querySelector(".button-container");
+function changeBGGreen(event){
+    if (event.target.tagName === 'BUTTON'){
+        event.target.style.backgroundColor = "green"
+    }
+   
+    // console.log(event.target)
+    // is the element that we clicked on
 }
-button.addEventListener('click', updateImage);
+
+buttonContainer.addEventListener("click", changeBGGreen)
